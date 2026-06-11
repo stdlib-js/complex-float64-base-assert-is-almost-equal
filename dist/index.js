@@ -1,5 +1,32 @@
-"use strict";var v=function(e,r){return function(){return r||e((r={exports:{}}).exports,r),r.exports}};var q=v(function(c,o){
-var a=require('@stdlib/number-float64-base-assert-is-almost-equal/dist'),u=require('@stdlib/complex-float64-reim/dist');function l(e,r,s){var t=u(e),i=u(r);return a(t[0],i[0],s)&&a(t[1],i[1],s)}o.exports=l
-});var n=q();module.exports=n;
 /** @license Apache-2.0 */
-//# sourceMappingURL=index.js.map
+
+'use strict';
+
+/**
+* Test whether two double-precision complex floating-point numbers are approximately equal within a specified number of ULPs (units in the last place).
+*
+* @module @stdlib/complex-float64-base-assert-is-almost-equal
+*
+* @example
+* var EPS = require( '@stdlib/constants-float64-eps' );
+* var Complex128 = require( '@stdlib/complex-float64-ctor' );
+* var isAlmostEqual = require( '@stdlib/complex-float64-base-assert-is-almost-equal' );
+*
+* var z1 = new Complex128( 1.0, 3.0 );
+* var z2 = new Complex128( 1.0+EPS, 3.0 );
+*
+* var bool = isAlmostEqual( z1, z2, 0 );
+* // returns false
+*
+* bool = isAlmostEqual( z1, z2, 1 );
+* // returns true
+*/
+
+// MODULES //
+
+var main = require( './main.js' );
+
+
+// EXPORTS //
+
+module.exports = main;
